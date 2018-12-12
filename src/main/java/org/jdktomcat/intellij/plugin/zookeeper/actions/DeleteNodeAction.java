@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper.actions;
+package org.jdktomcat.intellij.plugin.zookeeper.actions;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -8,8 +8,8 @@ import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.wm.impl.status.StatusBarUtil;
 import com.intellij.ui.treeStructure.Tree;
 import org.apache.curator.framework.CuratorFramework;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent;
-import org.mvnsearch.intellij.plugin.zookeeper.ui.ZkNode;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.ui.ZkNode;
 
 import javax.swing.*;
 import javax.swing.tree.TreePath;
@@ -17,7 +17,7 @@ import javax.swing.tree.TreePath;
 /**
  * delete zk node action
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class DeleteNodeAction extends AnAction {
     public void actionPerformed(final AnActionEvent anActionEvent) {

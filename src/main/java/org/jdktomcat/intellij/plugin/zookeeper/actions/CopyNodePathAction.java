@@ -1,12 +1,12 @@
-package org.mvnsearch.intellij.plugin.zookeeper.actions;
+package org.jdktomcat.intellij.plugin.zookeeper.actions;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.impl.status.StatusBarUtil;
 import com.intellij.ui.treeStructure.Tree;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent;
-import org.mvnsearch.intellij.plugin.zookeeper.ui.ZkNode;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.ui.ZkNode;
 
 import javax.swing.tree.TreePath;
 import java.awt.*;
@@ -18,7 +18,7 @@ import java.awt.datatransfer.Transferable;
 /**
  * copy zk node path action
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class CopyNodePathAction extends AnAction implements ClipboardOwner {
     public void actionPerformed(final AnActionEvent anActionEvent) {

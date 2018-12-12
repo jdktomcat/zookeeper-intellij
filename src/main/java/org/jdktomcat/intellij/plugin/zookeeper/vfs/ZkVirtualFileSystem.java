@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper.vfs;
+package org.jdktomcat.intellij.plugin.zookeeper.vfs;
 
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -15,7 +15,7 @@ import java.nio.charset.Charset;
 /**
  * zookeeper virtual file system
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class ZkVirtualFileSystem extends DummyFileSystem {
     public static final String PROTOCOL = "zk";

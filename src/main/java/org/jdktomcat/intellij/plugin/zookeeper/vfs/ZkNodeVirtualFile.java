@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper.vfs;
+package org.jdktomcat.intellij.plugin.zookeeper.vfs;
 
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.fileTypes.FileTypeManager;
@@ -23,7 +23,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * ZooKeeper node virtual file
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class ZkNodeVirtualFile extends VirtualFile {
     private ZkVirtualFileSystem fileSystem;

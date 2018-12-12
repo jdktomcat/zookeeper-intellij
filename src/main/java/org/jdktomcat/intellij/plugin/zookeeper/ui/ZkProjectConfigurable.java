@@ -1,21 +1,20 @@
-package org.mvnsearch.intellij.plugin.zookeeper.ui;
+package org.jdktomcat.intellij.plugin.zookeeper.ui;
 
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.wm.ToolWindowManager;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkConfigPersistence;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.ZkConfigPersistence;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
 
 import javax.swing.*;
 
 /**
  * Zoo Keeper application configurable
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class ZkProjectConfigurable implements Configurable {
     private Project project;

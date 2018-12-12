@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper.actions;
+package org.jdktomcat.intellij.plugin.zookeeper.actions;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -12,9 +12,9 @@ import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.ui.treeStructure.Tree;
 import org.apache.curator.framework.CuratorFramework;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent;
-import org.mvnsearch.intellij.plugin.zookeeper.ui.ZkNode;
-import org.mvnsearch.intellij.plugin.zookeeper.vfs.ZkNodeVirtualFile;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.ui.ZkNode;
+import org.jdktomcat.intellij.plugin.zookeeper.vfs.ZkNodeVirtualFile;
 
 import javax.swing.*;
 import javax.swing.tree.TreePath;
@@ -22,7 +22,7 @@ import javax.swing.tree.TreePath;
 /**
  * create zk node action
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class CreateNodeAction extends AnAction {
     public void actionPerformed(final AnActionEvent anActionEvent) {

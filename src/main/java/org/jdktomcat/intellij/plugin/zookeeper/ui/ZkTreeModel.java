@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper.ui;
+package org.jdktomcat.intellij.plugin.zookeeper.ui;
 
 import com.intellij.openapi.util.text.StringUtil;
 import org.apache.curator.framework.CuratorFramework;
@@ -12,7 +12,7 @@ import java.util.*;
 /**
  * zoo keeper tree model
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class ZkTreeModel implements TreeModel {
     private ZkNode root = new ZkNode("/", null);

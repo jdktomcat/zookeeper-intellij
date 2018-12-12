@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper;
+package org.jdktomcat.intellij.plugin.zookeeper;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -9,8 +9,9 @@ import com.intellij.psi.*;
 import com.intellij.psi.impl.source.resolve.reference.impl.providers.FileReferenceSet;
 import com.intellij.psi.impl.source.tree.java.PsiLiteralExpressionImpl;
 import com.intellij.util.ProcessingContext;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.vfs.ZkVirtualFileSystem;
 import org.jetbrains.annotations.NotNull;
-import org.mvnsearch.intellij.plugin.zookeeper.vfs.ZkVirtualFileSystem;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,7 +22,7 @@ import static com.intellij.patterns.StandardPatterns.string;
 /**
  * zookeeper node path reference contributor
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class ZkNodePathReferenceContributor extends PsiReferenceContributor {
 

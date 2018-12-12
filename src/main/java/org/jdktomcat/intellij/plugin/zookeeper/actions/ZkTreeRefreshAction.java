@@ -1,16 +1,16 @@
-package org.mvnsearch.intellij.plugin.zookeeper.actions;
+package org.jdktomcat.intellij.plugin.zookeeper.actions;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.ui.treeStructure.Tree;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
 
 import javax.swing.tree.TreePath;
 
 /**
  * Refresh Zoo Keeper Tree
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class ZkTreeRefreshAction extends AnAction {
     public void actionPerformed(AnActionEvent anActionEvent) {
@@ -21,6 +21,5 @@ public class ZkTreeRefreshAction extends AnAction {
         if (treePath != null) {
             zkTree.expandPath(treePath);
         }
-
     }
 }

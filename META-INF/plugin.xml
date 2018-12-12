@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<idea-plugin version="2">
+<idea-plugin>
     <id>zookeeper</id>
     <name>ZooKeeper</name>
     <version>0.0.14</version>
-    <vendor email="linux_china@hotmail.com" url="https://twitter.com/linux_china">
+    <vendor email="jdktomcat@hotmail.com" url="https://twitter.com/jdktomcat">
         Jacky Chan
     </vendor>
 
@@ -54,45 +54,57 @@
     <!-- uncomment to enable plugin in all products -->
     <depends>com.intellij.modules.lang</depends>
 
-    <application-components>
-        <!-- Add your application components here -->
-    </application-components>
+    <!--<application-components>-->
+        <!--&lt;!&ndash; Add your application components here &ndash;&gt;-->
+        <!--<component>-->
+            <!--<implementation-class>org.jdktomcat.intellij.plugin.zookeeper.component.application.ZkApplicationComponent</implementation-class>-->
+        <!--</component>-->
+    <!--</application-components>-->
 
     <project-components>
         <!-- Add your project components here -->
         <component>
-            <implementation-class>org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent</implementation-class>
+            <implementation-class>org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent</implementation-class>
         </component>
+        <!--<component>-->
+            <!--<implementation-class>TestProjectComponent</implementation-class>-->
+        <!--</component>-->
     </project-components>
+
+    <!--<module-components>-->
+        <!--<component>-->
+            <!--<implementation-class>org.jdktomcat.intellij.plugin.zookeeper.component.module.ZkModuleComponent</implementation-class>-->
+        <!--</component>-->
+    <!--</module-components>-->
 
     <actions>
         <group id="ZK.Toolbar" text="ZooKeeper ToolBar">
-            <action id="ZkTreeRefreshAction" class="org.mvnsearch.intellij.plugin.zookeeper.actions.ZkTreeRefreshAction"
+            <action id="ZkTreeRefreshAction" class="org.jdktomcat.intellij.plugin.zookeeper.actions.ZkTreeRefreshAction"
                     icon="/actions/refresh.png" text="Refresh" description="Refresh ZooKeeper"/>
         </group>
         <group id="ZK.OperationMenu" text="ZooKeeper Operations" popup="true">
-            <action id="Open in Editor" class="org.mvnsearch.intellij.plugin.zookeeper.actions.OpenZkNodeInEditorAction"
+            <action id="Open in Editor" class="org.jdktomcat.intellij.plugin.zookeeper.actions.OpenZkNodeInEditorAction"
                     icon="/actions/edit.png" text="Open in Editor"/>
             <separator/>
-            <action id="Create Child Node" class="org.mvnsearch.intellij.plugin.zookeeper.actions.CreateNodeAction"
+            <action id="Create Child Node" class="org.jdktomcat.intellij.plugin.zookeeper.actions.CreateNodeAction"
                     icon="/actions/new.png" text="Create Node"/>
             <separator/>
-            <action id="Delete Node" class="org.mvnsearch.intellij.plugin.zookeeper.actions.DeleteNodeAction"
+            <action id="Delete Node" class="org.jdktomcat.intellij.plugin.zookeeper.actions.DeleteNodeAction"
                     icon="/actions/delete.png" text="Delete Node"/>
             <separator/>
-            <action id="Copy Node Path" class="org.mvnsearch.intellij.plugin.zookeeper.actions.CopyNodePathAction"
+            <action id="Copy Node Path" class="org.jdktomcat.intellij.plugin.zookeeper.actions.CopyNodePathAction"
                     icon="/actions/copy.png" text="Copy Node Path"/>
         </group>
-        <action id="UpdateZkNodeAction" class="org.mvnsearch.intellij.plugin.zookeeper.actions.UpdateZkNodeAction"
+        <action id="UpdateZkNodeAction" class="org.jdktomcat.intellij.plugin.zookeeper.actions.UpdateZkNodeAction"
                 icon="/icons/zookeeper_small.png" text="Update ZK Node" description="Update ZooKeeper Node">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <projectConfigurable instance="org.mvnsearch.intellij.plugin.zookeeper.ui.ZkProjectConfigurable"/>
-        <projectService serviceInterface="org.mvnsearch.intellij.plugin.zookeeper.ZkConfigPersistence"
-                        serviceImplementation="org.mvnsearch.intellij.plugin.zookeeper.ZkConfigPersistence"/>
-        <!--<psi.referenceContributor implementation="org.mvnsearch.intellij.plugin.zookeeper.ZkNodePathReferenceContributor"/>-->
+        <projectConfigurable instance="org.jdktomcat.intellij.plugin.zookeeper.ui.ZkProjectConfigurable"/>
+        <projectService serviceInterface="org.jdktomcat.intellij.plugin.zookeeper.ZkConfigPersistence"
+                        serviceImplementation="org.jdktomcat.intellij.plugin.zookeeper.ZkConfigPersistence"/>
+        <!--<psi.referenceContributor implementation="ZkNodePathReferenceContributor"/>-->
     </extensions>
 </idea-plugin>

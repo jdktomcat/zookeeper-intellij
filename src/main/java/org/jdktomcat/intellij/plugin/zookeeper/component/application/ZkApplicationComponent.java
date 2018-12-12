@@ -1,10 +1,10 @@
-package org.mvnsearch.intellij.plugin.zookeeper;
+package org.jdktomcat.intellij.plugin.zookeeper.component.application;
 
 import com.intellij.ide.ui.customization.CustomizationUtil;
 import com.intellij.openapi.actionSystem.ActionGroup;
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.ActionPlaces;
-import com.intellij.openapi.components.ProjectComponent;
+import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.fileEditor.OpenFileDescriptor;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.fileTypes.FileTypeManager;
@@ -21,17 +21,18 @@ import com.intellij.ui.components.JBScrollPane;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentManager;
 import com.intellij.ui.treeStructure.Tree;
-import com.intellij.util.IconUtil;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.common.IOUtils;
 import org.jdesktop.swingx.renderer.DefaultTreeRenderer;
 import org.jdesktop.swingx.renderer.WrappingIconPanel;
+import org.jdktomcat.intellij.plugin.zookeeper.ZkConfigPersistence;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.ui.ZkNode;
+import org.jdktomcat.intellij.plugin.zookeeper.ui.ZkTreeModel;
+import org.jdktomcat.intellij.plugin.zookeeper.vfs.ZkVirtualFileSystem;
 import org.jetbrains.annotations.NotNull;
-import org.mvnsearch.intellij.plugin.zookeeper.ui.ZkNode;
-import org.mvnsearch.intellij.plugin.zookeeper.ui.ZkTreeModel;
-import org.mvnsearch.intellij.plugin.zookeeper.vfs.ZkVirtualFileSystem;
 
 import javax.swing.*;
 import javax.swing.tree.TreePath;
@@ -40,21 +41,16 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.io.ByteArrayOutputStream;
 import java.net.Socket;
-import java.util.Arrays;
 
-/**
- * Zoo Keeper project component
- *
- * @author linux_china
- */
-public class ZkProjectComponent extends DoubleClickListener implements ProjectComponent {
+public class ZkApplicationComponent extends DoubleClickListener implements ApplicationComponent {
+
     private Project project;
     private CuratorFramework curator;
     private Tree zkTree;
     private ZkVirtualFileSystem fileSystem;
     private final Icon rootIcon = IconLoader.findIcon("/icons/zookeeper_small.png");
 
-    public ZkProjectComponent(Project project) {
+    public ZkApplicationComponent(Project project) {
         this.project = project;
     }
 

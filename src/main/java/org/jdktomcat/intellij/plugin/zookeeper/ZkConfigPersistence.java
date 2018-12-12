@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper;
+package org.jdktomcat.intellij.plugin.zookeeper;
 
 import com.intellij.openapi.components.*;
 import com.intellij.openapi.project.Project;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * zookeeper configuration persistence
  *
- * @author linux_china
+ * @author jdktomcat
  */
 @State(name = "ZooKeeperConfig", storages = {@Storage(StoragePathMacros.WORKSPACE_FILE)})
 public class ZkConfigPersistence implements PersistentStateComponent<ZkConfigPersistence> {

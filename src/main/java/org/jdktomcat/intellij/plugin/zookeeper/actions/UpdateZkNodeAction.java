@@ -1,4 +1,4 @@
-package org.mvnsearch.intellij.plugin.zookeeper.actions;
+package org.jdktomcat.intellij.plugin.zookeeper.actions;
 
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.DataContext;
@@ -8,13 +8,13 @@ import com.intellij.openapi.editor.actionSystem.EditorActionHandler;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.impl.status.StatusBarUtil;
-import org.mvnsearch.intellij.plugin.zookeeper.ZkProjectComponent;
-import org.mvnsearch.intellij.plugin.zookeeper.vfs.ZkNodeVirtualFile;
+import org.jdktomcat.intellij.plugin.zookeeper.component.project.ZkProjectComponent;
+import org.jdktomcat.intellij.plugin.zookeeper.vfs.ZkNodeVirtualFile;
 
 /**
  * update zoo keeper node action
  *
- * @author linux_china
+ * @author jdktomcat
  */
 public class UpdateZkNodeAction extends EditorAction {
 
